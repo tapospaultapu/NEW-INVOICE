@@ -1,6 +1,6 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
-import { Product, CartItem, Language, SavedInvoice } from './types';
+import { Product, CartItem, Language, SavedInvoice } from './types.ts';
 import { 
   PlusIcon, 
   MinusIcon,
