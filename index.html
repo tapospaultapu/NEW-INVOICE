@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mati & Mritshilpo - Invoice Maker</title>
+    <title>মাটি ও মৃতশিল্প - ইনভয়েস মেকার</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,7 +43,7 @@
             #root {
                 display: block !important;
             }
-            /* Ensure the preview container and its children are visible and clean */
+            /* Ensure the preview container is clean for printing */
             #invoice-preview {
                 display: block !important;
                 position: absolute;
@@ -53,8 +53,7 @@
                 padding: 0;
                 margin: 0;
             }
-            /* Hide the rest of the application components */
-            header, section, div.flex-col.md\:flex-row.gap-4 {
+            header, section, .action-buttons {
                 display: none !important;
             }
         }
@@ -62,9 +61,11 @@
 <script type="importmap">
 {
   "imports": {
-    "react/": "https://esm.sh/react@^19.2.4/",
     "react": "https://esm.sh/react@^19.2.4",
+    "react-dom": "https://esm.sh/react-dom@^19.2.4",
+    "react/": "https://esm.sh/react@^19.2.4/",
     "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "@heroicons/react/24/outline": "https://esm.sh/@heroicons/react@2.0.18/24/outline",
     "@heroicons/react/": "https://esm.sh/@heroicons/react@^2.2.0/"
   }
 }
@@ -72,5 +73,7 @@
 </head>
 <body>
     <div id="root"></div>
+    <!-- Entry point for the application -->
+    <script type="module" src="./index.tsx"></script>
 </body>
 </html>
